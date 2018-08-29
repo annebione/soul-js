@@ -27,9 +27,9 @@ export default function Rank(array) {
                 array.sort()    
             }
         } else {
-            throw new Error('Soul.Rank: ' + typeof(array) + ' is not an Array')
+            throw new TypeError('Soul.Rank: ' + typeof(array) + ' is not an Array')
         }
     } catch(e) {
-        console.log(e);
+        console.error(e);
     }
 }
