@@ -7,19 +7,12 @@ export default function Rank(array) {
             if (arguments[1]) {
                 for (var i = 0; i < array.length; i ++) {
                     if (typeof array[i][arguments[1]] == 'number') {
-                        return array.sort(function(a, b) {
+                        return array[i][arguments[1]].sort(function(a, b) {
                             return a[i][arguments[1]] < b[i][arguments[1]]
                         })    
                     }
-
-                    if (typeof array[i][arguments[1]] == 'array') {
-                        const _rankedArrayKey = array[i][arguments[1]].sort();
-                        
-                        
-
-                    }
                     if (typeof array[i][arguments[1]] == 'string') {
-
+                        return array[i][arguments[1]].sort()
                     }
                 } 
             } else {
