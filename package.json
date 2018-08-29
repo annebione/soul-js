@@ -1,0 +1,26 @@
+{
+  "name": "soul",
+  "version": "1.0.0",
+  "description": "A small library aiming to make JavaScript methods and common operations more readable and human-friendly.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "rollup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annebione/soul-js.git"
+  },
+  "author": "Anne Bione",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/annebione/soul-js/issues"
+  },
+  "homepage": "https://github.com/annebione/soul-js#readme",
+  "devDependencies": {
+    "jasmine-check": "^1.0.0-rc.0",
+    "jest": "^23.5.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  }
+}
