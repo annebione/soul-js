@@ -21,7 +21,6 @@ export default function Rank(array) {
                     if (typeof array[i][arguments[1]] == 'string') {
 
                     }
-
                 } 
             } else {
                 array.sort()    
