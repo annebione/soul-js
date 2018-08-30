@@ -1,10 +1,20 @@
 export default function SetRanking(array, property, quantity) {
     try {
-        // output multidimensional array
-        let _output = [[], []];
-
         // Rankings to be returned. Since we're working with "top" and "bottom" results in 2
+        // Max number: 3, returns top, bottom and middle results
         const RANKING_ROWS = 2;
+        
+        const DEFAULT_ROWS = 2;
+        const MAX_RANKING_ROWS_QUANTITY = 3;
+        const CURRENT_RANKING_ROW = 1;
+
+        // output  array
+        let _output = [];
+
+        // Set ranking rows in output according to settings
+        for (var i = 0; i < RANKING_ROWS; i++) {
+            _output.push(new Array())
+        }
         
         // Check type of arguments, else throw TypeError
         if (
@@ -23,8 +33,17 @@ export default function SetRanking(array, property, quantity) {
                     return a[property] < b[property];
                 })
             }
+
             _output[0].push(array.slice(0, _results))
-            _output[1].push(array.slice(-_results, _results))
+            _output[1].push(array.slice(-_results))
+            
+            if (RANKING_ROWS == MAX_RANKING_ROWS_QUANTITY) {
+                _output[RANKING_ROWS].push(array.splice(-results, _results * (RANKING_ROWS - CURRENT_RANKING_ROW)))
+            }
+
+            if (RANKING_ROWS > MAX_RANKING_ROWS_QUANTITY) {
+                _output = _output.slice(0, DEFAULT_ROWS)
+            }
 
             return _output;
 

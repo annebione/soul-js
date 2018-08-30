@@ -1,11 +1,14 @@
-export default function Rank(array) {
+export default function Render({data: Array, element: String, value: String}) {
     try {
-        // Type check, throw TypeError if necessary
-        if (Array.isArray(array)) {
+        const _elementClass = element.indexOf('.') > -1 ? element : `. ${element}`;
+        const _args = arguments;
 
-        } else {
-            throw new TypeError('Soul.Rank: ' + typeof(array) + ' is not an Array')
+        // Check if
+        if (Array.isArray(array) && _args[2]) {
+
         }
+
+
     } catch(e) {
         console.error(e);
     }

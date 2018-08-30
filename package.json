@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "server": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +21,10 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "babel-core": "^6.26.3",
+    "istanbul": "^0.4.5",
     "jasmine-check": "^1.0.0-rc.0",
     "jest": "^23.5.0",
+    "nyc": "^13.0.1",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-babel-minify": "^6.0.0",
     "rollup-plugin-ignore": "^1.0.3",
