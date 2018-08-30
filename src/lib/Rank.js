@@ -8,7 +8,7 @@ export default function Rank(array) {
                 for (var i = 0; i < array.length; i ++) {
                     if (typeof array[i][arguments[1]] == 'number') {
                         return array[i][arguments[1]].sort(function(a, b) {
-                            return a[i][arguments[1]] < b[i][arguments[1]]
+                            return a < b
                         })    
                     }
                     if (typeof array[i][arguments[1]] == 'string') {
