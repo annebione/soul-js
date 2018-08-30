@@ -1,13 +1,22 @@
-export default function Render({data: Array, element: String, value: String}) {
+export default function Render(config) {
     try {
         const _elementClass = element.indexOf('.') > -1 ? element : `. ${element}`;
         const _args = arguments;
+        const _values = [];
 
-        // Check if
-        if (Array.isArray(array) && _args[2]) {
+        if (Array.isArray(config.data) && config.value) {
+            config.data.forEach((key, index, array) => {
+                _values.push(key[config.value])
+            })
+
+            document.querySelector(_elementClass).innerHTML= _values.join(' - ');
+
+            return true;
 
         }
-
+        else {
+            throw new TypeError()
+        }
 
     } catch(e) {
         console.error(e);
