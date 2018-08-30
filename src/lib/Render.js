@@ -1,4 +1,9 @@
-export default function Render(config) {
+export default function Render(
+    config = {
+        data: [],
+        element: '',
+        value: false 
+    }) {
     try {
         const _elementClass = element.indexOf('.') > -1 ? element : `. ${element}`;
         const _args = arguments;
