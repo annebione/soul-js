@@ -3,6 +3,8 @@ import babel  from "rollup-plugin-babel";
 import minify from 'rollup-plugin-babel-minify';
 import ignore from 'rollup-plugin-ignore';
 
+const CHECK_ENVIRONMENT = process.env.NODE_ENV == 'production' ? false : true;
+
 export default {
 
 	plugins: [
@@ -10,7 +12,8 @@ export default {
 		babel(),
 		ignore(['test.js', '.ts']),
 		minify({
-			comments: false 
+			comments: false,
+			sourceMap: CHECK_ENVIRONMENT
 		})
 	],
 
@@ -20,7 +23,7 @@ export default {
 		file: "dist/soul.min.js",
 		format: "cjs",
 		name: "Soul",
-		sourcemap: true
+		sourcemap: CHECK_ENVIRONMENT
 	}
 
 };
