@@ -4,7 +4,8 @@
   "description": "A small library aiming to make JavaScript methods and common operations more readable and human-friendly.",
   "main": "src/index.js",
   "scripts": {
-    "build": "rollup",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,8 +25,10 @@
     "jest": "^23.5.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-babel-minify": "^6.0.0",
+    "rollup-plugin-ignore": "^1.0.3",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^4.0.0"
+    "rollup-plugin-uglify": "^4.0.0",
+    "rollup-watch": "^4.3.1"
   },
   "dependencies": {
     "uglify-es": "github:mishoo/UglifyJS2#harmony",
