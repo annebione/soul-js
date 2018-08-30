@@ -1,6 +1,3 @@
-
-
-
 export default function Rank(array) {
     const _args = arguments;
 
