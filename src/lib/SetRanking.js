@@ -1,3 +1,5 @@
+import typeIsCorrect from '../utils/typeIsCorrect';
+
 export default function SetRanking(array, property, quantity) {
     try {
         // Rankings to be returned. Since we're working with "top" and "bottom" results in 2
@@ -18,8 +20,8 @@ export default function SetRanking(array, property, quantity) {
         
         // Check type of arguments, else throw TypeError
         if (
-            Array.isArray(array)
-            && typeof(property) == 'string' 
+            typeIsCorrect(array, 'array')
+            && typeIsCorrect(property, 'string') 
             && Number.isInteger(quantity)
         ) {
 

@@ -1,7 +1,4 @@
-
-
 export default function CapitalizeAll(string) {
-
     try {
         let isString = typeof(string) == 'string' ? true : false;
 

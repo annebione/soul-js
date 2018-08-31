@@ -1,9 +1,11 @@
+import typeIsCorrect from '../utils/typeIsCorrect';
+
 export default function ReverseRank(array) {
     const _args = arguments;
 
     try {
         // Type check, throw TypeError if necessary
-        if (Array.isArray(array)) {
+        if (typeIsCorrect(array, 'array')) {
 
             // Check if it's an array of objects by looking into an optional second argument
             // Do a simple sort if it's not
