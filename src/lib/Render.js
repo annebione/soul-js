@@ -1,3 +1,5 @@
+import typeIsCorrect from '../utils/typeIsCorrect';
+
 export default function Render(
     config = {
         data: [],
@@ -9,7 +11,7 @@ export default function Render(
         const _args = arguments;
         const _values = [];
 
-        if (Array.isArray(config.data) && config.value) {
+        if (typeIsCorrect(config.data, 'array') && config.value) {
             config.data.forEach((key, index, array) => {
                 _values.push(key[config.value])
             })
