@@ -1,4 +1,4 @@
-# Soul.js
+# ❤ Soul.js
 
 ## TODO: Docs
 
