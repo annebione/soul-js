@@ -1,6 +1,5 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
 
-
 export default function Rank(array) {
     const _args = arguments;
 
