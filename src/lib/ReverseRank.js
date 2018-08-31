@@ -1,6 +1,5 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
 
-
 export default function ReverseRank(array) {
     const _args = arguments;
 
