@@ -12,8 +12,8 @@ test('Rank function with an array of objects', t => {
 	);
 });
 
-test('bar', async t => {
-	const bar = Promise.resolve('bar');
-	console.log('bar');
-	t.is(await bar, 'bar');
+test('Rank function with an array of numbers', t => {
+	t.is(
+		Soul.Rank([2,4,7,9,7,0]), [0,2,4,7,7,9]
+	);
 });
