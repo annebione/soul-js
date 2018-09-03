@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* declare var jasmine: any;
+declare var jasmine: any;
 
 declare function afterEach(fn: any): any;
 declare function beforeEach(fn: any): any;
@@ -75,4 +75,4 @@ declare module 'jasmine-check' {
   export function install(global?: any): void;
 }
 declare var check: any;
-declare var gen: any; */
+declare var gen: any; 

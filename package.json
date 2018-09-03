@@ -1,39 +1,41 @@
 {
-  "name": "soul",
-  "version": "1.0.0",
-  "description": "A small library aiming to make JavaScript methods and common operations more readable and human-friendly.",
-  "main": "src/index.js",
-  "scripts": {
-    "build": "rollup -c",
-    "server": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/annebione/soul-js.git"
-  },
-  "author": "Anne Bione",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/annebione/soul-js/issues"
-  },
-  "homepage": "https://github.com/annebione/soul-js#readme",
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "babel-core": "^6.26.3",
-    "istanbul": "^0.4.5",
-    "jasmine-check": "^1.0.0-rc.0",
-    "jest": "^23.5.0",
-    "nyc": "^13.0.1",
-    "rollup-plugin-babel": "^4.0.2",
-    "rollup-plugin-babel-minify": "^6.0.0",
-    "rollup-plugin-ignore": "^1.0.3",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^4.0.0",
-    "rollup-watch": "^4.3.1"
-  },
-  "dependencies": {
-    "uglify-es": "github:mishoo/UglifyJS2#harmony",
-    "uglify-js": "github:mishoo/UglifyJS2#harmony"
-  }
+ "name": "soul",
+ "version": "1.0.0",
+ "description": "A small library aiming to make JavaScript methods and common operations more readable and human-friendly.",
+ "main": "src/index.js",
+ "scripts": {
+  "build": "rollup -c",
+  "server": "rollup -c -w",
+  "test": "ava --verbose \"./**/*.test.js\""
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/annebione/soul-js.git"
+ },
+ "author": "Anne Bione",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/annebione/soul-js/issues"
+ },
+ "homepage": "https://github.com/annebione/soul-js#readme",
+ "devDependencies": {
+  "@ava/babel-preset-stage-4": "^2.0.0",
+  "@babel/core": "^7.0.0",
+  "@babel/register": "^7.0.0",
+  "ava": "^1.0.0-beta.8",
+  "babel-core": "^6.26.3",
+  "jasmine": "^3.2.0",
+  "nyc": "^13.0.1",
+  "rollup-plugin-babel": "^4.0.2",
+  "rollup-plugin-babel-minify": "^6.0.0",
+  "rollup-plugin-ignore": "^1.0.3",
+  "rollup-plugin-node-resolve": "^3.3.0",
+  "rollup-plugin-uglify": "^4.0.0",
+  "rollup-watch": "^4.3.1",
+  "tap-nyan": "^1.1.0"
+ },
+ "dependencies": {
+  "uglify-es": "github:mishoo/UglifyJS2#harmony",
+  "uglify-js": "github:mishoo/UglifyJS2#harmony"
+ }
 }

@@ -1,4 +1,5 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
+import { resolve } from 'dns';
 
 export default function Render(
     config = {
@@ -18,7 +19,9 @@ export default function Render(
 
             document.querySelector(_elementClass).innerHTML= _values.join(' - ');
 
-            return true;
+            return new Promise((resolve, reject) => {
+                return resolve(config);
+            })
 
         }
         else {

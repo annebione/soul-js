@@ -1,4 +1,5 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
+import { resolve } from 'path';
 
 export default function SetRanking(array, property, quantity) {
     try {
@@ -47,7 +48,10 @@ export default function SetRanking(array, property, quantity) {
                 _output = _output.slice(0, DEFAULT_ROWS)
             }
 
-            return _output;
+            return new Promise((resolve, reject) => {
+                return resolve(_output);
+            }) 
+    
 
         } else {
             throw new TypeError();
