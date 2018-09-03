@@ -1,5 +1,4 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
-import { resolve } from 'dns';
 
 export default function Render(
     config = {

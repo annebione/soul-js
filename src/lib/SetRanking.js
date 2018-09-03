@@ -1,5 +1,4 @@
 import typeIsCorrect from '../utils/typeIsCorrect';
-import { resolve } from 'path';
 
 export default function SetRanking(array, property, quantity) {
     try {
@@ -21,7 +20,7 @@ export default function SetRanking(array, property, quantity) {
         
         // Check type of arguments, else throw TypeError
         if (
-            typeIsCorrect(array, 'array')
+            Array.isArray(array)
             && typeIsCorrect(property, 'string') 
             && Number.isInteger(quantity)
         ) {
