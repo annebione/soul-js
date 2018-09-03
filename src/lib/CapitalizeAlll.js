@@ -4,7 +4,9 @@ export default function CapitalizeAll(string) {
 
         if (isString) {
             return string.replace(/(\b\w)/gi, function(l) {
-                return l.toUppercase();
+                return new Promise((resolve, reject) => {
+                    resolve(l.toUppercase());
+                })
              })
         } else {
             throw new TypeError();

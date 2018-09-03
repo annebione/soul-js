@@ -2,6 +2,7 @@ import typeIsCorrect from '../utils/typeIsCorrect';
 
 export default function ReverseRank(array) {
     const _args = arguments;
+    const _promise = new Promise();
 
     try {
         // Type check, throw TypeError if necessary
@@ -12,12 +13,12 @@ export default function ReverseRank(array) {
             if (_args[1]) {
                 for (var i = 0; i <= array.length + 5; i++) {
                     if (typeof(array[i][_args[1]]) == 'number') {
-                        return array.sort(function(a, b) {
+                        return _promise.resolve(array.sort(function(a, b) {
                             return a[_args[1]] < b[_args[1]]
-                        }).reverse()
+                        }).reverse())
                     }
                     if (typeof(array[i][_args[1]]) == 'string') {
-                        return array.sort(function(a, b) {
+                        return _promise.resolve(array.sort(function(a, b) {
                             if (a[_args[1]] < b[_args[1]]) {
                                 return -1
                             }
@@ -25,11 +26,11 @@ export default function ReverseRank(array) {
                                 return 1
                             }
                             return 0;
-                        }).reverse()
+                        }).reverse())
                     }
                 } 
             } else {
-                return array.sort().reverse();    
+                return _promise.resolve(array.sort().reverse());    
             }
         } else {
             throw new TypeError('Soul.Rank: ' + typeof(array) + ' is not an Array')
