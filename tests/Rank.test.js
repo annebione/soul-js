@@ -1,7 +1,7 @@
 import test from 'ava';
 
 import Soul from '../src'
-import dataArray from './mockups/dataArray';
+import dataArray from './mocks/dataArray';
 
 test('Rank function with an array of objects', t => {
 	t.is(

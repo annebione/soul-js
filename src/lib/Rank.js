@@ -37,7 +37,7 @@ export default function Rank(array) {
                 })
             }
         } else {
-            throw new TypeError('data is not an Array')
+            throw new TypeError('Soul.Rank: data is not an Array')
         }
     } catch(e) {
         console.error(e);

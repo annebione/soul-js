@@ -1,7 +1,9 @@
 Object.defineProperty(Array.prototype, "RemoveDoubles", {
     enumerable: false,
     writable: true,
-    value: function(data) {
-        // code to remove doubles in array
+    value: function() {
+        return this.sort().filter((item, pos, source) => {
+            return item != source[pos - 1]
+        })
     }
 });
