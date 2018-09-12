@@ -8,7 +8,7 @@ export default function ReverseRank(array) {
             // Check if it's an array of objects by looking into an optional second argument
             // Do a simple sort if it's not
             if (_args[1]) {
-                for (var i = 0; i <= array.length + 5; i++) {
+                for (var i = 0, max = array.length; i <= max + 5; i++) {
                     if (typeof(array[i][_args[1]]) == 'number') {
                         return new Promise((resolve, reject) => {
                             resolve(array.sort(function(a, b) {

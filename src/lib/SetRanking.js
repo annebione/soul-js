@@ -30,7 +30,7 @@ export default function SetRanking(array, property, quantity) {
             // quantity equals array length divided by ranking rows
             let _results = quantity * RANKING_ROWS >= array.length ? quantity : array.length / RANKING_ROWS;
 
-            for (var i = 0; i < array.length; i++) {
+            for (var i = 0, max = array.length; i < max; i++) {
                 array.sort(function(a, b) {
                     return a[property] < b[property];
                 })
