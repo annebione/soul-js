@@ -18,12 +18,13 @@ export default function SetRanking(array, property, quantity) {
             _output.push(new Array())
         }
         
+        const areTruthy = [ 
+            Array.isArray(array),
+            typeIsCorrect(property, 'string'),
+            Number.isInteger(quantity) 
+        ]
         // Check type of arguments, else throw TypeError
-        if (
-            Array.isArray(array)
-            && typeIsCorrect(property, 'string') 
-            && Number.isInteger(quantity)
-        ) {
+        if (!areTruthy.includes(false)) {
 
             // Results to be returned in each ranking row. 
             // If quantity * RANKING_ROWS is minor than array length, 
